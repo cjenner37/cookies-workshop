@@ -33,24 +33,26 @@ $(document).ready(function () {
 			sugar = users[0].sugar;
 			chocolate = users[0].chocolate;
 			lemon = users[0].lemon;
+			reloadBags();
 		} else if ($('#username').val() === 'Casey') {
 			sugar = users[1].sugar;
 			chocolate = users[1].chocolate;
 			lemon = users[1].lemon;
+			reloadBags();
 		} else {
 			sugar = users[2].sugar;
 			chocolate = users[2].chocolate;
 			lemon = users[2].lemon;
+			reloadBags();
 		}
 	})
 
-
-	$('#sugar').html(Cookies.get(sugar));
-	$('#chocolate').html(Cookies.get(chocolate));
-	$('#lemon').html(Cookies.get(lemon));
-	
-
-	
+	function reloadBags() {
+		$('#sugar').html(Cookies.get(sugar));
+		$('#chocolate').html(Cookies.get(chocolate));
+		$('#lemon').html(Cookies.get(lemon));		
+	}
+		
 	$('#sugar-quantity').click(function () {
 		Cookies.set(sugar, $(this).val());
 		$('#sugar').html(Cookies.get(sugar));
@@ -63,7 +65,4 @@ $(document).ready(function () {
 		Cookies.set(lemon, $(this).val());
 		$('#lemon').html(Cookies.get(lemon));
 	})
-
-
-
 })
