@@ -44,14 +44,9 @@ $(document).ready(function () {
 			chocolate = users[2].chocolate;
 			lemon = users[2].lemon;
 			reloadBags();
-		}
-	})
+		};
+	});
 
-	function reloadBags() {
-		$('#sugar').html(Cookies.get(sugar));
-		$('#chocolate').html(Cookies.get(chocolate));
-		$('#lemon').html(Cookies.get(lemon));		
-	}
 		
 	$('#sugar-quantity').click(function () {
 		Cookies.set(sugar, $(this).val());
@@ -64,5 +59,19 @@ $(document).ready(function () {
 	$('#lemon-quantity').click(function () {
 		Cookies.set(lemon, $(this).val());
 		$('#lemon').html(Cookies.get(lemon));
-	})
+	});
+
+	$('#clear').click(function () {
+		Cookies.set(sugar, 0);
+		Cookies.set(chocolate, 0);
+		Cookies.set(lemon, 0);
+		reloadBags();
+	});
+
+
+	function reloadBags() {
+		$('#sugar').html(Cookies.get(sugar));
+		$('#chocolate').html(Cookies.get(chocolate));
+		$('#lemon').html(Cookies.get(lemon));		
+	};
 })
