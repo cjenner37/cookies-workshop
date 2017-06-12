@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cookies Workshop</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="cookies.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="big-container" id="falling-container">
+		<div class="falling-cookies" id="sugar-falling"></div>
+		<div class="falling-cookies" id="chocolate-falling"></div>
+		<div class="falling-cookies" id="lemon-falling"></div>
+	</div>
+	<div class="big-container">
+		<div class="bag"></div>
+		<div class="bag"></div>
+		<div class="bag"></div>
+	</div>
+	<div class="big-container">
+		<div class="choice-container">
+			<form oninput="x.value=parseInt(a.value)">
+				<p>Sugar:</p>
+				<input id="sugar-quantity" type="range" name="a" ><output name="x"></output>
+			</form>
+		</div>
+
+		<div class="choice-container">
+			<form oninput="x.value=parseInt(a.value)">
+				<p>Chocolate:</p>
+				<input id="chocolate-quantity" type="range" name="a" ><output name="x"></output>
+			</form>
+		</div>
+
+
+		<div class="choice-container">
+			<form oninput="x.value=parseInt(a.value)">
+				<p>Lemon:</p>
+				<input id="lemon-quantity" type="range" name="a" ><output name="x"></output>
+			</form>
+		</div>
+	</div>
+
+	<form>
+		<input type="textbox" name="username" id="username">
+		<input type="button" name="submit" value="Sign In" id="sign-in">
+	</form>
+
+	<p>In your bag:</p>
+	<span id="sugar">0</span> Sugar Cookies<br>
+	<span id="chocolate">0</span> Chocolate Cookies<br>
+	<span id="lemon">0</span> Lemon Cookies
+
+
+
+
+</body>
+</html>
