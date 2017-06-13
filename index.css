@@ -30,5 +30,70 @@ body {
 
 .choice-container {
 	display: inline-block;
-	background-color: blueviolet;
+	/*background-color: blueviolet;*/
+}
+
+form {
+	text-align: center;
+}
+
+#description {
+	text-align: center;
+	margin: 20px;
+}
+
+#clear {
+    padding: 0 2em;
+    background: blanchedalmond;
+    border: 3px solid;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 1em;
+    padding: 1em 2em;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 400px;
+}
+
+#clear:hover {
+	cursor: pointer;
+	color: #0e83cd;
+}
+
+#username {
+	font-weight: 600;
+   letter-spacing: 2px;
+   font-size: 14px;
+    margin: 1em;
+    padding: 1em 2em;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 300px;
+    border: 3px solid;
+}
+
+#sign-in{
+	padding: 0 2em;
+    background: blanchedalmond;
+    border: 3px solid;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 1em;
+    padding: 10px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 110px;
+}
+
+#sign-in:hover {
+	cursor: pointer;
+	color: #0e83cd;
 }
