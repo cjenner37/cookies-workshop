@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cookies Workshop</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="animations.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="cookies.js"></script>
 	<script type="text/javascript" src="index.js"></script>
@@ -16,39 +17,40 @@
 		<div class="falling-cookies" id="lemon-falling"></div>
 	</div>
 
-	<div class="big-container">
-		<div class="bag"></div>
-		<div class="bag"></div>
-		<div class="bag"></div>
+	<form>
+		<input type="textbox" name="username" id="username">
+		<input type="button" name="submit" value="Sign In" id="sign-in">
+	</form>
+
+	<div class="bag-container" class="big-container">
+		<div class="bag" id="sugar-bag"><img src="images/sugar.jpg"></div>
+		<div class="bag" id="chocolate-bag"><img src="images/chocolate.jpg"></div>
+		<div class="bag" id="lemon-bag"><img src="images/lemon.jpg"></div>
 	</div>
 
 	<div class="big-container">
 		<div class="choice-container">
 			<form oninput="x.value=parseInt(a.value)">
 				<p>Sugar:</p>
-				<input id="sugar-quantity" type="range" name="a" ><output name="x"></output>
+				<input data-for="sugar-bag" id="sugar-quantity" type="range" name="a" ><output name="x"></output>
 			</form>
 		</div>
 
 		<div class="choice-container">
 			<form oninput="x.value=parseInt(a.value)">
 				<p>Chocolate:</p>
-				<input id="chocolate-quantity" type="range" name="a" ><output name="x"></output>
+				<input data-for="chocolate-bag" id="chocolate-quantity" type="range" name="a" ><output name="x"></output>
 			</form>
 		</div>
 
 		<div class="choice-container">
 			<form oninput="x.value=parseInt(a.value)">
 				<p>Lemon:</p>
-				<input id="lemon-quantity" type="range" name="a" ><output name="x"></output>
+				<input data-for="lemon-bag" id="lemon-quantity" type="range" name="a" ><output name="x"></output>
 			</form>
 		</div>
 	</div>
 
-	<form>
-		<input type="textbox" name="username" id="username">
-		<input type="button" name="submit" value="Sign In" id="sign-in">
-	</form>
 
 	<p>In your bag:</p>
 	<span id="sugar">0</span> Sugar Cookies<br>
